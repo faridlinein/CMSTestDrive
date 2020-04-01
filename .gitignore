@@ -1,2 +1,4 @@
 *.pyc
-.vscode/
+
+dir_to_ignore/
+*vscode/
