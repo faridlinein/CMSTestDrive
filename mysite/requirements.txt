@@ -24,7 +24,6 @@ django-ipware==2.1.0
 django-js-asset==1.2.2
 django-markdown==0.8.4
 django-mptt==0.11.0
-django-polls==0.1.0
 django-polymorphic==2.1.2
 django-sekizai==1.1.0
 django-taggit==1.2.0

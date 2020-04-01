@@ -140,6 +140,9 @@ MIDDLEWARE = [
 ]
 
 INSTALLED_APPS = [
+    # ---Group UserApp
+    'polls',
+    # ---Group 
     'djangocms_admin_style',
     'django.contrib.auth',
     'django.contrib.contenttypes',

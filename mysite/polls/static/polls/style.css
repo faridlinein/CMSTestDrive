@@ -1,0 +1,8 @@
+li a {
+    color: white;
+}
+
+body {
+    /* background: whitesmoke url("images/background.gif") no-repeat; */
+    background: whitesmoke url("images/background.gif") repeat;
+}
