@@ -142,6 +142,11 @@ MIDDLEWARE = [
 INSTALLED_APPS = [
     # ---Group UserApp
     'polls',
+    'blog',
+    # ---Group Third-party distributions
+    'taggit',
+    # ---Group buils in (tapi perlu di load manual)
+    'django.contrib.postgres',
     # ---Group 
     'djangocms_admin_style',
     'django.contrib.auth',

@@ -1,0 +1,37 @@
+{% extends "blog/base.html" %}
+
+{% block title %}My Blog{% endblock %}
+
+{% block content %}
+
+<h1>My Blog</h1>
+<!-- Loop for post -->
+{% for post in posts %}
+<h2>
+    <a href="{{ post.get_absolute_url }}">
+        {{ post.title }}
+    </a>
+</h2>
+<p class="date">
+    Published {{ post.publish }} by {{ post.author }}
+</p>
+{{ post.body|truncatewords:30|linebreaks }}
+{% endfor %}
+
+<!-- PAGINATOR -->
+{% comment "NOTE_" %} -----
+In order to keep pagination working, we have to use the right page
+object that is passed to the template. Django's ListView generic view
+passes the selected page in a variable called page_obj , so you have to
+edit your post/list.html template accordingly to include the paginator
+using the right variable, as follows:
+    change 
+    {% include "pagination.html" with page=page %}
+    to 
+    {% include "pagination.html" with page=page_obj %}
+----- {% endcomment %}
+
+
+{% include "pagination.html" with page=page_obj %}
+
+{% endblock %}
